@@ -34,18 +34,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <form method="POST" action=" update.php?id=<?php echo $row['id_aulas'];?>">
-        <label for="sala">Sala:</label>
-        <input type="text" name="sala" value="<?php echo $row['sala']; ?>" required>
-        <label for="disciplina">Disciplina:</label>
-        <input type="text" name="disciplina" value="<?php echo $row['disciplina']; ?>" required>
-        <label for="data_aula">Data da aula:</label>
-        <input type="date" name="data_aula" value="<?php echo $row['data_aula']; ?>" required>
-        <label for="horario">Horário:</label>
-        <input type="time" name="horario" value="<?php echo $row['horario']; ?>" required>
+        <label for="sala">Sala:</label><br>
+        <input type="text" name="sala" value="<?php echo $row['sala']; ?>" required><br><br>
+        <label for="disciplina">Disciplina:</label><br>
+        <input type="text" name="disciplina" value="<?php echo $row['disciplina']; ?>" required><br><br>
+        <label for="data_aula">Data da aula:</label><br>
+        <input type="date" name="data_aula" value="<?php echo $row['data_aula']; ?>" required><br><br>
+        <label for="horario">Horário:</label><br>
+        <input type="time" name="horario" value="<?php echo $row['horario']; ?>" required><br><br>
         <input type="submit" value="Atualizar">
     </form>
 

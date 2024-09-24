@@ -35,20 +35,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <form method="POST" action=" update2.php?id=<?php echo $row['id_professores'];?>">
-        <label for="Nome">Nome:</label>
-        <input type="text" name="nome" value="<?php echo $row['nome']; ?>" required>
-        <label for="email">Email:</label>
-        <input type="text" name="email" value="<?php echo $row['email']; ?>" required>
-        <label for="telefone">Telefone:</label>
-        <input type="number" name="telefone" value="<?php echo $row['telefone']; ?>" required>
-        <label for="especialidade">Especialidade:</label>
-        <input type="text" name="especialidade" value="<?php echo $row['especialidade']; ?>" required>
-        <label for="data_contratacao">Data da contratação:</label>
-        <input type="date" name="data_contratacao" value="<?php echo $row['data_contratacao']; ?>" required>
+        <label for="Nome">Nome:</label><br>
+        <input type="text" name="nome" value="<?php echo $row['nome']; ?>" required><br><br>
+        <label for="email">Email:</label><br>
+        <input type="text" name="email" value="<?php echo $row['email']; ?>" required><br><br>
+        <label for="telefone">Telefone:</label><br>
+        <input type="number" name="telefone" value="<?php echo $row['telefone']; ?>" required><br><br>
+        <label for="especialidade">Especialidade:</label><br>
+        <input type="text" name="especialidade" value="<?php echo $row['especialidade']; ?>" required><br><br>
+        <label for="data_contratacao">Data da contratação:</label><br>
+        <input type="date" name="data_contratacao" value="<?php echo $row['data_contratacao']; ?>" required><br><br>
         <input type="submit" value="Atualizar">
     </form>
 

@@ -43,3 +43,5 @@ $conn->close();
 ?>
 <br>
 <a href="create2.php">Inserir novo registro.</a>
+<br>
+<a href="index.html">Voltar para página inicial.</a>

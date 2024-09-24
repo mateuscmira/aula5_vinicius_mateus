@@ -25,6 +25,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -42,4 +43,6 @@ $conn->close();
         <input type="submit" value="Cadastrar Aula">
     </form>
     <a href="read.php">Ver registros.</a>
+    <br>
+    <a href="index.html">Voltar para página inicial.</a>
 </html>

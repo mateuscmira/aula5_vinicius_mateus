@@ -23,6 +23,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro dos Professores</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>Cadastro de Professores</h1>
@@ -40,5 +41,7 @@ $conn->close();
         <input type="submit" value="Cadastrar Professor">
     </form>
     <a href="read2.php">Ver registros.</a>
+    <br>
+    <a href="index.html">Voltar para página inicial.</a>
 </body>
 </html>
