@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $mensagem = "Erro: " . $sql . "<br>" . $conn->error;
         }
     }
-    
+} 
     $sql = "SELECT * FROM Professores";
     $result = $conn->query($sql);
 
