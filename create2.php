@@ -26,7 +26,7 @@ $conn->close();
 </head>
 <body>
 <h1>Cadastro de Professores</h1>
-    <form action="create.php" method="POST">
+    <form action="create2.php" method="POST">
         <label for="nome">Nome:</label><br>
         <input type="text" id="nome" name="nome" required><br><br>
         <label for="email">Email:</label><br>
@@ -39,6 +39,6 @@ $conn->close();
         <input type="date" id="data_contratacao" name="data_contratacao" required><br><br>
         <input type="submit" value="Cadastrar Professor">
     </form>
-    <a href="read.php">Ver registros.</a>
+    <a href="read2.php">Ver registros.</a>
 </body>
 </html>

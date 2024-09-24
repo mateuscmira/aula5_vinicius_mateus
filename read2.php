@@ -4,13 +4,12 @@ include 'db.php';abc
 
 $sql = "SELECT * FROM Professores";
 
-$result = $conn -> query($sql);
+$result = $conn->query($sql);
 
-<br>
-<a href="create2.php">Inserir novo registro.</a>
+
 
 if ($result->num_rows > 0) {
-        echo "<table border='1'>
+    echo "<table border='1'>
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>
@@ -18,22 +17,29 @@ if ($result->num_rows > 0) {
                     <th>Telefone</th>
                     <th>Especialidade</th>
                     <th>Data de Contratação</th>
+                    <th>Ações</th>
                 </tr>";
 
-        while($row = $result->fetch_assoc()) {
-            echo "<tr>
+    while ($row = $result->fetch_assoc()) {
+        echo "<tr>
                     <td>{$row['id_professores']}</td>
                     <td>{$row['nome']}</td>
                     <td>{$row['email']}</td>
                     <td>{$row['telefone']}</td>
                     <td>{$row['especialidade']}</td>
                     <td>{$row['data_contratacao']}</td>
+                    <td>
+                    <a href='update2.php?id={$row['id_professores']}'>Editar</a> |
+                    <a href='delete2.php?id={$row['id_professores']}'>Excluir</a>
+                </td>
                   </tr>";
-        }
-        echo "</table>";
-    } else {
-        echo "Nenhum professor encontrado.";
     }
+    echo "</table>";
+} else {
+    echo "Nenhum professor encontrado.";
+}
 
-    $conn->close();
-    ?>
+$conn->close();
+?>
+<br>
+<a href="create2.php">Inserir novo registro.</a>
