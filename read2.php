@@ -1,6 +1,6 @@
 <?php
 
-include 'db.php';abc
+include 'db.php';
 
 $sql = "SELECT * FROM Professores";
 
