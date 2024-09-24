@@ -14,27 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         echo "Erro: " . $sql . "<br>" . $conn->error;
     }
-
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $nome = $_POST['nome'];
-        $email = $_POST['email'];
-        $telefone = $_POST['telefone'];
-        $especialidade = $_POST['especialidade'];
-        $data_contratacao = $_POST['data_contratacao'];
-    
-        $sql = "INSERT INTO Professores (nome, email, telefone, especialidade, data_contratacao) 
-                VALUES ('$nome', '$email', '$telefone', '$especialidade', '$data_contratacao')";
-    
-        if ($conn->query($sql) === TRUE) {
-            $mensagem = "Novo professor registrado com sucesso!";
-        } else {
-            $mensagem = "Erro: " . $sql . "<br>" . $conn->error;
-        }
-    }
-    
-    $sql = "SELECT * FROM Professores";
-    $result = $conn->query($sql);
-
+}
 $conn->close();
 ?>
 
