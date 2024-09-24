@@ -7,8 +7,10 @@
 
         $sala = $_POST['sala'];
         $disciplina = $_POST['disciplina'];
+        $data_aula = $_POST['data_aula'];
+        $horario = $_POST['horario'];
 
-        $sql = "UPDATE aulas SET sala='$sala', email='$email' WHERE id_aulas=$id_aulas";
+        $sql = "UPDATE aulas SET sala='$sala', disciplina='$disciplina', data_aula ='$data_aula', horario ='$horario' WHERE id_aulas=$id_aulas";
 
         if ($conn->query($sql) === TRUE) {
             echo "Registro atualizado com sucesso";
@@ -21,7 +23,7 @@
         exit();
     }
 
-    $sql = "SELECT * FROM user WHERE id=$id";
+    $sql = "SELECT * FROM aulas WHERE id_aulas=$id_aulas";
     $result = $conn -> query($sql);
     $row = $result -> fetch_assoc();
 
@@ -35,11 +37,15 @@
 </head>
 <body>
     
-    <form method="POST" action=" update.php?id=<?php echo $row['id'];?>">
-        <label for="name">Nome</label>
-        <input type="text" name="name" value="<?php echo $row['name']; ?>" required>
-        <label for="email">Email</label>
-        <input type="email" name="email" value="<?php echo $row['email']; ?>" required>
+    <form method="POST" action=" update.php?id=<?php echo $row['id_aulas'];?>">
+        <label for="sala">Sala:</label>
+        <input type="text" name="sala" value="<?php echo $row['sala']; ?>" required>
+        <label for="disciplina">Disciplina:</label>
+        <input type="text" name="disciplina" value="<?php echo $row['disciplina']; ?>" required>
+        <label for="data_aula">Data da aula:</label>
+        <input type="date" name="data_aula" value="<?php echo $row['data_aula']; ?>" required>
+        <label for="horario">Horário:</label>
+        <input type="time" name="horario" value="<?php echo $row['horario']; ?>" required>
         <input type="submit" value="Atualizar">
     </form>
 
